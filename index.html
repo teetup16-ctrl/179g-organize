@@ -102,7 +102,7 @@ a.btn:hover{border-color:var(--ac)}
 .stile{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 8px;border-radius:14px;border:1px solid var(--bd);border-top:3px solid var(--zc);font-weight:600}
 .stile .sic{color:var(--zc)}
 .stile:hover,.stile.on{border-color:var(--zc)}
-.set.one{grid-template-columns:1fr;max-width:680px}
+.set.one{grid-template-columns:minmax(0,1fr);max-width:680px}
 @media(max-width:560px){.stiles{grid-template-columns:repeat(2,1fr)}}
 .lg{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;overflow:hidden;cursor:pointer;flex:none}
 .lg img{width:100%;height:100%;object-fit:contain}
@@ -524,12 +524,17 @@ tr.bddropb>td{box-shadow:inset 0 -4px 0 var(--ac)}
 #main.rodocs :is([data-bdadd],[data-sbadd],.sbpick,[data-sbimgdel],[data-sbshotdel],[data-bddel],[data-bdpicdel]){display:none}
 #main.rodocs .bdst{visibility:hidden}
 .stiles.s6{grid-template-columns:repeat(6,1fr)}
-@media(max-width:640px){.stiles.s6{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.stiles.s6{grid-template-columns:repeat(3,1fr)}
+.permr .sm{display:none}
+.permt th,.permt td{padding:6px 5px}}
 table.permt{min-width:0;width:auto}
 .permt th,.permt td{text-align:center;padding:6px 8px;height:auto}
 .permt thead th{font-size:11px;white-space:normal;max-width:76px;line-height:1.25;vertical-align:bottom}
 .permt th.pgrp{font-size:12px;font-weight:700;color:var(--tx);border-bottom:1px solid var(--bd);max-width:none}
 .permt tbody th{text-align:left;white-space:nowrap;font-weight:600;color:var(--tx)}
+/* position column stays visible while the table scrolls sideways on phones */
+.permt tbody th,.permt thead tr:first-child th:first-child{position:sticky;left:0;z-index:1;background:var(--card);box-shadow:1px 0 0 var(--bd)}
+.permon+.meta{overflow-wrap:anywhere}
 .permt td:nth-child(10),.permt th.pgrp+th.pgrp,.permt thead tr:last-child th:nth-child(9){border-left:1px solid var(--bd)}
 .permt input{width:18px;height:18px;cursor:pointer}
 .permr{display:flex;align-items:center;gap:6px}
