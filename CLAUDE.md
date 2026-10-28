@@ -12,7 +12,7 @@ Team work-organizer app (Thai UI): "งานของฉัน" home page (each
 - These only work when the page runs as the published Artifact. Opening `index.html` locally shows the UI but no data and no AI.
 - Never rename or reshape stored collections/fields without a migration path — existing records must keep loading.
 - `localStorage` is only for per-viewer conveniences (theme `ruap-theme`, AI undo, which Crew member "me" is: `179g-me`).
-- `sessionStorage` key `179g-intro` marks that the logo intro already played this session (intro markup + early inline script sit right after `<body>`).
+- `sessionStorage` key `179g-intro` marks that the logo intro already played this session (intro markup + early inline script sit right after `<body>`). The intro shows the real logo PNGs from Drive folder "Logo 179G" (`logo 179G 2.png` dark theme, `logo 179G.png` light theme) — never redraw or alter the logo; the animated strokes are only a mask that reveals it.
 
 ## How to ship a change
 1. Edit `index.html`.
